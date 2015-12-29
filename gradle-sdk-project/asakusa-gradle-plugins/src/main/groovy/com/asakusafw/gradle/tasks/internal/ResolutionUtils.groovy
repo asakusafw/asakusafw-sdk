@@ -72,7 +72,10 @@ final class ResolutionUtils {
         if (arg == null) {
             // skip this entry
         } else if (arg instanceof String) {
-            results.add(arg)
+            String s = arg
+            for (String element in s.split(",")) {
+                results.add(element)
+            }
         } else if (arg instanceof Closure<?>) {
             Closure<?> c = arg
             resolveInto(c.call(), results)
