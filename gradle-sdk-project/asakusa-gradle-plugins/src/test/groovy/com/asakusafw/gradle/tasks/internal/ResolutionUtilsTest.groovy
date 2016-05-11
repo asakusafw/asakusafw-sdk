@@ -102,8 +102,9 @@ class ResolutionUtilsTest {
             { 'Hello2' },
             { 'Hello3' } as Callable<?>,
             [ 'n1', { 'n2' } ],
+            'c1,c2',
         ])
-        assert values == ['100', 'Hello2', 'Hello3', 'n1', 'n2']
+        assert values == ['100', 'Hello2', 'Hello3', 'n1', 'n2', 'c1', 'c2']
     }
 
     /**
